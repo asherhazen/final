@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+          <title>Hazen Sprinkler</title>
+          <meta charset="uft-8"/>
+          <meta name="description" content="A page about Hazen Sprinkler.">
+          <link href="stylesheets.css" rel="stylesheet" type="text/css">
+        </head>
+
+        <body>
+          <nav>
+            <div class="topnav">
+              <a class="current" href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="contactpage.html">Contact Us</a>
+            </div>
+          </nav>
+
+          <div class="pagebox">
+            <header style="width: 100%; background-image: url('images/banner.jpg'); text-align: center; padding: 150px 0; 
+                background-size: cover; background-position: center center;"><h1><mark style="background-color: #2E933C">Hazen Sprinkler</mark></h1></header>
+            <h2 id="part0"><mark style="background-color: #2E933C">Table of Contents</mark></h2>
+            <ul>
+              <li><a href="#part1">Why Choose Us</a></li>
+              <li><a href="#part2">Slideshow</a></li>
+              <li><a href="#part3">Video</a></li>
+            </ul>
+
+            <article>
+              <section>
+                <h2 id="part1"><mark style="background-color: #2E933C">Why Choose Us</mark></h2>
+                <a href="#part0">Back to Contents</a>
+                        
+                <p>
+                  <img class="ourstory" src="images/ourstory.jpg">
+                  Welcome to Hazen Sprinkler where passion for vibrant lawns meets cutting-edge sprinkler solutions.
+                  Established with a vision to transform landscapes into lush masterpieces, we take pride in being a premier 
+                  provider of sprinkler systems tailored to your unique needs.
+                  With roots that trace back to 2011, we've been dedicated to redefining the way you experience lawn care. At Hazen Sprinkler, we believe in more than 
+                  just sprinkler systems; we believe in cultivating green havens that breathe life into your outdoor spaces.
+                  Our journey is marked by a commitment to excellence, evident in every sprinkler system we install. By using <a href="https://www.rainbird.com/">Rain Bird</a> equipment we leverage the latest technologies and 
+                  high-quality components, ensuring that your lawn receives the care it deserves. From precision irrigation to sustainable water management, we strive to exceed your expectations and bring your dream lawn to life.
+                  What sets us apart is not just our expertise but the passion we infuse into every project. Our team of seasoned professionals is driven by a shared love for impeccable lawns, making us the go-to choice for those who 
+                  appreciate the art and science of irrigation. At Hazen Sprinkler, we understand that a sprinkler system is an investment in the beauty and health of your property. 
+                  That's why we are fully licensed and insured, providing you with peace of mind as we bring our expertise to your doorstep. Join us on 
+                  this journey of turning ordinary lawns into extraordinary landscapes. Discover the Hazen Sprinkler difference—where innovation meets irrigation, and your
+                  dream lawn becomes a reality.
+                </p>
+                <hr/>
+              </section>
+
+              <section id="slideshow">
+                <h2 id="part2"><mark style="background-color: #2E933C">Showing Who We Are</mark></h2>
+                <a href="#part0">Back to Contents</a>
+                <div class="slideshow-container">
+                          
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 2</div>
+                  <img src="images/sprinkler1.jpg" style="width:100%">
+                </div>
+                            
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 2</div>
+                  <img src="images/sprinkler2.jpg" style="width:100%">
+                </div>
+                            
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                            
+                </div>
+                <br>
+                            
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+                <hr/>
+              </section>
+
+              <section>
+                <h2 id="part3"><mark style="background-color: #2E933C">Demonstration</mark></h2>
+                <a href="#part0">Back to Contents</a>
+                <div class="video_container">
+                  <iframe src="https://www.youtube.com/embed/v6TPa4ma6vs?si=ZC1t7zQoG9kZiyC1"></iframe>
+                  <hr/>
+              </section>
+
+            </article>
+        
+            <footer>
+              <p>This page was created by Asher &copy; 2023</p>
+            </footer>
+
+            </div>
+
+            <script>
+              let slideIndex = 1;
+              showSlides(slideIndex);
+                
+              function plusSlides(n) {
+              showSlides(slideIndex += n);
+              }
+                
+              function currentSlide(n) {
+              showSlides(slideIndex = n);
+              }
+                
+              function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+              </script>
+              
+        </body>
+
+    </html>
